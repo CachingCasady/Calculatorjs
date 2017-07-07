@@ -7,7 +7,12 @@ function clear() {
 
 function key(element) {
 	var keySelected = element;
-	console.log(keySelected.id);
-	alert(keySelected.id);
+	accumulator += keySelected.id;
+
+	if (keySelected.id == "CLR") {
+		accumulator = "";
+		document.getElementById("screenTotal").innerHTML = accumulator;
+		alert("merp");
+	}
 	// console.log(document.getElementById("/").getAttribute('value'));
 }
